@@ -1,12 +1,26 @@
-let js = 'amazing';
-if (js === 'amazing') {
-    alert("hello lindos");
-}
-console.log(86 - 69 + 52 - 10);
+//  BOLLEAN
+let javascriptIsFun = true;
+console.log(javascriptIsFun);
 
-let firstName = "Lindos";
-let first = "jones";
+console.log(typeof true);
+console.log(typeof javascriptIsFun);
 
-console.log(firstName);
-console.log(firstName);
-console.log(firstName);
+// NUMBER
+console.log(typeof 23);
+
+// STRING
+console.log(typeof "Jonas");
+console.log(typeof 'lindos');
+
+// CHANGE BOOLEAN
+javascriptIsFun = "YES";
+console.log(javascriptIsFun);
+
+// UNDIFIEND
+let year;
+console.log(year);
+console.log(typeof year);
+
+year = 1990;
+console.log(typeof year);
+console.log(year);
