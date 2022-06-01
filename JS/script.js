@@ -1,26 +1,14 @@
-//  BOLLEAN
-let javascriptIsFun = true;
-console.log(javascriptIsFun);
+// LET
+let age = 30;
+age = 20;
+console.log(age);
 
-console.log(typeof true);
-console.log(typeof javascriptIsFun);
+// CONST is not changable because its constant
+const birthYear = 1990;
+// birthYear = 1980;
+console.log(birthYear);
 
-// NUMBER
-console.log(typeof 23);
-
-// STRING
-console.log(typeof "Jonas");
-console.log(typeof 'lindos');
-
-// CHANGE BOOLEAN
-javascriptIsFun = "YES";
-console.log(javascriptIsFun);
-
-// UNDIFIEND
-let year;
-console.log(year);
-console.log(typeof year);
-
-year = 1990;
-console.log(typeof year);
-console.log(year);
+// VAR
+var job = "programming";
+job = "programmer";
+console.log(job);
