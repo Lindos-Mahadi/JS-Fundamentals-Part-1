@@ -1,14 +1,29 @@
-// PRECEDANCE OPERATOR
-const ageLindos = 2030 - 1992;
-const ageSara = 2030 - 2019;
-console.log(ageLindos, ageSara);
+// CODDING CHALLENGE
 
-let x, y;
-x = y = 25 - 10 - 5;
-console.log(x, y);
+//Test Data One
+// const massMark = 78;
+// const heightMark = 1.69;
 
-const averageAge = (ageLindos + ageSara) / 2
-console.log(ageLindos, ageSara, averageAge);
+// const massJohn = 92;
+// const heightJohn = 1.95;
+
+//Test Data Two
+const massMark = 96;
+const heightMark = 1.88;
+
+const massJohn = 85;
+const heightJohn = 1.76;
+
+const BMIMark = massMark / heightMark ** 2;
+const BMIJohn = massJohn / (heightJohn * heightJohn);
+console.log(BMIMark > BMIJohn);
+const massMarkHigherBMI = BMIMark > BMIJohn;
+console.log(massMarkHigherBMI);
+
+console.log(BMIMark, BMIJohn);
+
+
+
 
 
 
