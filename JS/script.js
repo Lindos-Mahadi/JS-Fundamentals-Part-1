@@ -1,26 +1,27 @@
-// CODDING CHALLENGE
+// STRING AND TEMPLATE LITERALS
 
-//Test Data One
-// const massMark = 78;
-// const heightMark = 1.69;
+const firstName = 'lindos';
+const job = 'developer';
+const birthYear = 1994;
+const year = 2022;
 
-// const massJohn = 92;
-// const heightJohn = 1.95;
+// DOUBLE STRING QUOTES AND SINGLE QUOTES
+const fullSantence = "I'm " + firstName + ', a ' + (year - birthYear) + ' years old ' + job + '!';
+console.log(fullSantence);
 
-//Test Data Two
-const massMark = 96;
-const heightMark = 1.88;
+// BACK TICK
+const fullSantenceNew = `I'm ${firstName}, a ${year - birthYear} years old ${job} !`;
+console.log(fullSantenceNew);
 
-const massJohn = 85;
-const heightJohn = 1.76;
+// MULTIPLE LINE WITH SINGLE QUOTE WITH NEW LINE
+console.log('String withn\n\
+multiple\n\
+lines');
 
-const BMIMark = massMark / heightMark ** 2;
-const BMIJohn = massJohn / (heightJohn * heightJohn);
-console.log(BMIMark > BMIJohn);
-const massMarkHigherBMI = BMIMark > BMIJohn;
-console.log(massMarkHigherBMI);
-
-console.log(BMIMark, BMIJohn);
+// TEMPLATE LITERALS
+console.log(`String with 
+multiple line
+in JavaScript`);
 
 
 
