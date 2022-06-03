@@ -1,29 +1,30 @@
-// Truthy and Falsy Values
+// EQUALITY OPERATOR == VS ===
 
-// Five Falsy Values: 0, '', undifiend, null, NaN
-console.log(Boolean(0));
-console.log(Boolean(''));
-console.log(Boolean(undefined));
-console.log(Boolean(null));
-console.log(Boolean(NaN));
+const age = 50;
+if (age === 50) console.log('You just enough adult (strict)');
 
-// Truthy Value
-console.log(Boolean(1));
-console.log(Boolean('Lindos'));
-console.log(Boolean({}));
+if (age == '50') console.log('You just enough adult (loose)');
+if (age == 50) console.log('You just enough adult (loose)');
+if (age === '50') console.log('You just enough adult (loose)');
 
-const money = 0;
-if (money) {
-    console.log("Dont spent all;)");
-} else {
-    console.log("You should get a job;)");
+// GET VALUE
+// prompt('What is your favourite number ?');
+// const getNumber = prompt('What is your favourite number ?');
+// console.log(favourite);
+// console.log(typeof favourite);
+
+
+// convert string to number
+const favourite = Number(prompt('What is your favourite number ?'));
+
+// if (favourite === 20) {
+//     console.log('Cool! ' + favourite + 'is an amazing number');
+// } else if (favourite == 10) {
+//     console.log('Cool! ' + favourite + ' is also an amazing number');
+// } else {
+//     console.log('No favourite number is found');
+// }
+
+if (favourite !== 20) {
+    console.log('You dont like ' + favourite);
 }
-
-const height = 0;
-if (height) {
-    console.log("Height is Defiend;)");
-} else {
-    console.log("Height Undifiend;)");
-}
-
-
