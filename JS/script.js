@@ -1,37 +1,22 @@
 
+// TYPE CONVERSION
 
+const inputYear = '1991';
+console.log(Number(inputYear), inputYear);
+console.log(inputYear + 18);
+console.log(Number(inputYear) + 18);
+console.log(Number('lindos'));
+console.log(typeof NaN);
+console.log(String(25), 25);
 
+//TYPE COERCION
+console.log('I am ' + 23 + 'years old');
+console.log('23' - '10' - 3);
+console.log('23' / '2');
 
-
-
-
-
-
-
-
-
-
-// STRING AND TEMPLATE LITERALS
-
-const firstName = 'lindos';
-const job = 'developer';
-const birthYear = 1994;
-const year = 2022;
-
-// EXPRESSION
-const fullSantenceNew = `I'm ${firstName}, a ${year - birthYear} years old ${job} !`;
-console.log(fullSantenceNew);
-
-
-// STATEMENT
-if (year > birthYear) {
-
-    console.log(true);
-}
-
-
-
-
+let n = '1' + 1; // '11'
+n = n - 1;
+console.log(n);
 
 
 
