@@ -1,41 +1,17 @@
-// CODDING CHALLENGE TWO
+// THE CONDITIONAL TERNARY OPERATOR
 
-// const avarageDolphine = (96 + 108 + 89) / 3;
-// const avarageKoalas = (88 + 91 + 110) / 3;
-// console.log(avarageDolphine + " " + avarageKoalas);
+const age = 13;
+// age >= 15 ? console.log('I would like to drink 🍹') : console.log('You should drink a class of watter 🤽');
 
-// if (avarageDolphine > avarageKoalas) {
-//     console.log(`Dolphine is ${avarageDolphine} winner and Koalas ${avarageKoalas}`);
-// } else if (avarageKoalas > avarageDolphine) {
-//     console.log(`Koalas  is ${avarageKoalas} winner and Dolphine is ${avarageDolphine}`);
-// } else if (avarageKoalas === avarageDolphine) {
-//     console.log(`The match is drow. Koalas is  ${avarageKoalas} and Dolphine is ${avarageDolphine}`);
-// }
+const drink = age >= 18 ? 'Wine 🍷' : 'Water 🤽';
+console.log(drink);
 
-// BONUS One
-// const avarageDolphine = (97 + 112 + 101) / 3;
-// const avarageKoalas = (109 + 95 + 123) / 3;
-// console.log(avarageDolphine + " " + avarageKoalas);
-
-// if (avarageDolphine > avarageKoalas && avarageDolphine >= 100) {
-//     console.log(`Dolphine is ${avarageDolphine} winner and Koalas ${avarageKoalas}`);
-// } else if (avarageKoalas > avarageDolphine && avarageKoalas >= 100) {
-//     console.log(`Koalas  is ${avarageKoalas} winner and Dolphine is ${avarageDolphine}`);
-// } else if (avarageKoalas === avarageDolphine) {
-//     console.log(`The match is drow. Koalas is  ${avarageKoalas} and Dolphine is ${avarageDolphine}`); 
-// }
-
-// BONUS Two
-const avarageDolphine = (97 + 112 + 81) / 3;
-const avarageKoalas = (109 + 95 + 86) / 3;
-console.log(avarageDolphine + " " + avarageKoalas);
-
-if (avarageDolphine > avarageKoalas && avarageDolphine >= 100) {
-    console.log(`Dolphine is ${avarageDolphine} winner and Koalas ${avarageKoalas}`);
-} else if (avarageKoalas > avarageDolphine && avarageKoalas >= 100) {
-    console.log(`Koalas  is ${avarageKoalas} winner and Dolphine is ${avarageDolphine}`);
-} else if (avarageKoalas === avarageDolphine && avarageDolphine >= 100 && avarageKoalas >= 100) {
-    console.log(`The match is drow. Koalas is  ${avarageKoalas} and Dolphine is also ${avarageDolphine}`);
+let drink2;
+if (age >= 18) {
+    drink2 = 'Wine 🍷';
 } else {
-    console.log('No one wins the trophy');
+    drink2 = 'Water 🤽';
 }
+console.log(drink2);
+
+console.log(`I like to drink ${age >= 18 ? 'Wine 🍷' : 'Water 🤽'}`);
