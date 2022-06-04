@@ -1,23 +1,33 @@
-// LOGICAL OPERATORS
+// CODDING CHALLENGE TWO
 
-const hasDriversLicense = true; //A
-const hasGoodVision = true; //B
-// const hasGoodVision = false; //C
+//Test Data One
+const massMark = 78;
+const heightMark = 1.69;
 
-// console.log(hasDriversLicense && hasGoodVision); // AND operator
-console.log(hasDriversLicense && hasGoodVision);
-console.log(!hasDriversLicense);
-console.log(!hasGoodVision);
+const massJohn = 92;
+const heightJohn = 1.95;
 
-// const shouldDrive = hasDriversLicense && hasGoodVision;
-// if (shouldDrive) {
-//     console.log("You can drive");
-// } else {
-//     console.log('Someone else should drive....');
-// }
+//Test Data Two
+// const massMark = 96;
+// const heightMark = 1.88;
 
-if (hasDriversLicense && hasGoodVision) {
-    console.log("You can drive");
+// const massJohn = 85;
+// const heightJohn = 1.76;
+
+const BMIMark = massMark / heightMark ** 2;
+const BMIJohn = massJohn / (heightJohn * heightJohn);
+
+console.log(BMIMark, BMIJohn);
+
+if (BMIMark > BMIJohn) {
+    console.log("Marks BMI is heighter than John");
 } else {
-    console.log('Someone else should drive....');
+    console.log("John BMI is heighter than Marks");
 }
+const massMarkHigherBMI = BMIMark < BMIJohn;
+if (massMarkHigherBMI) {
+    console.log(`Mark BMI ${massMark} is greater than Johns BMI ${massJohn}`);
+} else {
+    console.log(`John BMI ${BMIJohn} is less than Mark BMI ${massMark}`);
+}
+
