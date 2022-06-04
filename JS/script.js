@@ -1,30 +1,23 @@
-// EQUALITY OPERATOR == VS ===
+// LOGICAL OPERATORS
 
-const age = 50;
-if (age === 50) console.log('You just enough adult (strict)');
+const hasDriversLicense = true; //A
+const hasGoodVision = true; //B
+// const hasGoodVision = false; //C
 
-if (age == '50') console.log('You just enough adult (loose)');
-if (age == 50) console.log('You just enough adult (loose)');
-if (age === '50') console.log('You just enough adult (loose)');
+// console.log(hasDriversLicense && hasGoodVision); // AND operator
+console.log(hasDriversLicense && hasGoodVision);
+console.log(!hasDriversLicense);
+console.log(!hasGoodVision);
 
-// GET VALUE
-// prompt('What is your favourite number ?');
-// const getNumber = prompt('What is your favourite number ?');
-// console.log(favourite);
-// console.log(typeof favourite);
-
-
-// convert string to number
-const favourite = Number(prompt('What is your favourite number ?'));
-
-// if (favourite === 20) {
-//     console.log('Cool! ' + favourite + 'is an amazing number');
-// } else if (favourite == 10) {
-//     console.log('Cool! ' + favourite + ' is also an amazing number');
+// const shouldDrive = hasDriversLicense && hasGoodVision;
+// if (shouldDrive) {
+//     console.log("You can drive");
 // } else {
-//     console.log('No favourite number is found');
+//     console.log('Someone else should drive....');
 // }
 
-if (favourite !== 20) {
-    console.log('You dont like ' + favourite);
+if (hasDriversLicense && hasGoodVision) {
+    console.log("You can drive");
+} else {
+    console.log('Someone else should drive....');
 }
