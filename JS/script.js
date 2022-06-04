@@ -1,33 +1,41 @@
 // CODDING CHALLENGE TWO
 
-//Test Data One
-const massMark = 78;
-const heightMark = 1.69;
+// const avarageDolphine = (96 + 108 + 89) / 3;
+// const avarageKoalas = (88 + 91 + 110) / 3;
+// console.log(avarageDolphine + " " + avarageKoalas);
 
-const massJohn = 92;
-const heightJohn = 1.95;
+// if (avarageDolphine > avarageKoalas) {
+//     console.log(`Dolphine is ${avarageDolphine} winner and Koalas ${avarageKoalas}`);
+// } else if (avarageKoalas > avarageDolphine) {
+//     console.log(`Koalas  is ${avarageKoalas} winner and Dolphine is ${avarageDolphine}`);
+// } else if (avarageKoalas === avarageDolphine) {
+//     console.log(`The match is drow. Koalas is  ${avarageKoalas} and Dolphine is ${avarageDolphine}`);
+// }
 
-//Test Data Two
-// const massMark = 96;
-// const heightMark = 1.88;
+// BONUS One
+// const avarageDolphine = (97 + 112 + 101) / 3;
+// const avarageKoalas = (109 + 95 + 123) / 3;
+// console.log(avarageDolphine + " " + avarageKoalas);
 
-// const massJohn = 85;
-// const heightJohn = 1.76;
+// if (avarageDolphine > avarageKoalas && avarageDolphine >= 100) {
+//     console.log(`Dolphine is ${avarageDolphine} winner and Koalas ${avarageKoalas}`);
+// } else if (avarageKoalas > avarageDolphine && avarageKoalas >= 100) {
+//     console.log(`Koalas  is ${avarageKoalas} winner and Dolphine is ${avarageDolphine}`);
+// } else if (avarageKoalas === avarageDolphine) {
+//     console.log(`The match is drow. Koalas is  ${avarageKoalas} and Dolphine is ${avarageDolphine}`); 
+// }
 
-const BMIMark = massMark / heightMark ** 2;
-const BMIJohn = massJohn / (heightJohn * heightJohn);
+// BONUS Two
+const avarageDolphine = (97 + 112 + 81) / 3;
+const avarageKoalas = (109 + 95 + 86) / 3;
+console.log(avarageDolphine + " " + avarageKoalas);
 
-console.log(BMIMark, BMIJohn);
-
-if (BMIMark > BMIJohn) {
-    console.log("Marks BMI is heighter than John");
+if (avarageDolphine > avarageKoalas && avarageDolphine >= 100) {
+    console.log(`Dolphine is ${avarageDolphine} winner and Koalas ${avarageKoalas}`);
+} else if (avarageKoalas > avarageDolphine && avarageKoalas >= 100) {
+    console.log(`Koalas  is ${avarageKoalas} winner and Dolphine is ${avarageDolphine}`);
+} else if (avarageKoalas === avarageDolphine && avarageDolphine >= 100 && avarageKoalas >= 100) {
+    console.log(`The match is drow. Koalas is  ${avarageKoalas} and Dolphine is also ${avarageDolphine}`);
 } else {
-    console.log("John BMI is heighter than Marks");
+    console.log('No one wins the trophy');
 }
-const massMarkHigherBMI = BMIMark < BMIJohn;
-if (massMarkHigherBMI) {
-    console.log(`Mark BMI ${massMark} is greater than Johns BMI ${massJohn}`);
-} else {
-    console.log(`John BMI ${BMIJohn} is less than Mark BMI ${massMark}`);
-}
-
