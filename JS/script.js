@@ -1,5 +1,12 @@
-// CODDING CHALLANGE FOUR
+// ACTIVATING STRICT MODE
 
-const bill = 275;
-const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : 0.2;
-console.log(`“The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`);
+'use strict';
+
+let hasDriversLicense = false;
+const passTest = true;
+
+// if (passTest) hasDriversLicense = true;
+// if (hasDriversLicense) console.log('I can drive ☢️');
+
+const interface = 'Audio';
+const private = 9662;
