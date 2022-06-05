@@ -1,17 +1,5 @@
-// THE CONDITIONAL TERNARY OPERATOR
+// CODDING CHALLANGE FOUR
 
-const age = 13;
-// age >= 15 ? console.log('I would like to drink 🍹') : console.log('You should drink a class of watter 🤽');
-
-const drink = age >= 18 ? 'Wine 🍷' : 'Water 🤽';
-console.log(drink);
-
-let drink2;
-if (age >= 18) {
-    drink2 = 'Wine 🍷';
-} else {
-    drink2 = 'Water 🤽';
-}
-console.log(drink2);
-
-console.log(`I like to drink ${age >= 18 ? 'Wine 🍷' : 'Water 🤽'}`);
+const bill = 275;
+const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : 0.2;
+console.log(`“The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`);
