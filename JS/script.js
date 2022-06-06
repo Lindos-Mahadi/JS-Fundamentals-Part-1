@@ -1,12 +1,22 @@
-// ACTIVATING STRICT MODE
+// FUNCTIONS
 
-'use strict';
+function logger() {
+    console.log('My name is Mahadi');
+}
 
-let hasDriversLicense = false;
-const passTest = true;
+// calling / running / invoking function
+logger();
+logger();
+logger();
 
-// if (passTest) hasDriversLicense = true;
-// if (hasDriversLicense) console.log('I can drive ☢️');
+function fruitProcessor(apples, oranges) {
+    const juice = `juice with ${apples} apples and ${oranges} oranges`;
+    return juice;
+    // return juice;
+}
+const appleJuice = fruitProcessor(5, 0);
+console.log(appleJuice);
+// console.log(fruitProcessor(5, 0)); 
 
-const interface = 'Audio';
-const private = 9662;
+const appleOrangeJuice = fruitProcessor(3, 1);
+console.log(appleOrangeJuice);
