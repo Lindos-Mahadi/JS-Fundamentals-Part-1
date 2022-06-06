@@ -1,22 +1,13 @@
-// FUNCTIONS
-
-function logger() {
-    console.log('My name is Mahadi');
+// FUNCTIONS DECLARATION
+function age1(birthYear) {
+    return 2022 - birthYear;
 }
+const calAge1 = age1(1994);
 
-// calling / running / invoking function
-logger();
-logger();
-logger();
-
-function fruitProcessor(apples, oranges) {
-    const juice = `juice with ${apples} apples and ${oranges} oranges`;
-    return juice;
-    // return juice;
+// FUNCTIONS EXPRESSION
+const age2 = function age2(birthYear) {
+    return 2022 - birthYear;
 }
-const appleJuice = fruitProcessor(5, 0);
-console.log(appleJuice);
-// console.log(fruitProcessor(5, 0)); 
+const calAge2 = age2(1994);
 
-const appleOrangeJuice = fruitProcessor(3, 1);
-console.log(appleOrangeJuice);
+console.log(calAge1, calAge2);
