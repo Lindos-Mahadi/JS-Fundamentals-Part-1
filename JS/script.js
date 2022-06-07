@@ -1,13 +1,20 @@
-// FUNCTIONS DECLARATION
-function age1(birthYear) {
-    return 2022 - birthYear;
-}
-const calAge1 = age1(1994);
+// FUNCTIONS ARROWS EXPRESSION
 
-// FUNCTIONS EXPRESSION
 const age2 = function age2(birthYear) {
     return 2022 - birthYear;
 }
-const calAge2 = age2(1994);
+const calage2 = age2(1995);
 
-console.log(calAge1, calAge2);
+
+const calAge3 = birthYear => 2022 - birthYear;
+const age3 = calAge3(1994);
+console.log(age3);
+
+const yearUntilRetirement = (birthYear, firstName) => {
+    const age = 2037 - birthYear;
+    const retirement = 65 - age;
+    // return retirement;
+    return `${firstName} retires in ${birthYear} years`;
+}
+console.log(yearUntilRetirement(1991, 'lindos'));
+console.log(yearUntilRetirement(1991, 'mahadi'));
