@@ -1,20 +1,15 @@
-// FUNCTIONS ARROWS EXPRESSION
+// FUNCTIONS CALLING OTHER FUNCTIONS
 
-const age2 = function age2(birthYear) {
-    return 2022 - birthYear;
+function cutFruitPieaces(fruit) {
+    return fruit * 4;
 }
-const calage2 = age2(1995);
 
+function fruitProcessor(apples, oranges) {
 
-const calAge3 = birthYear => 2022 - birthYear;
-const age3 = calAge3(1994);
-console.log(age3);
+    const applesPieaces = cutFruitPieaces(apples);
+    const orangesPieaces = cutFruitPieaces(oranges);
 
-const yearUntilRetirement = (birthYear, firstName) => {
-    const age = 2037 - birthYear;
-    const retirement = 65 - age;
-    // return retirement;
-    return `${firstName} retires in ${birthYear} years`;
+    const juice = `Juice with ${applesPieaces} piece of apple and ${orangesPieaces} pieace of orange`;
+    return juice;
 }
-console.log(yearUntilRetirement(1991, 'lindos'));
-console.log(yearUntilRetirement(1991, 'mahadi'));
+console.log(fruitProcessor(2, 3));
