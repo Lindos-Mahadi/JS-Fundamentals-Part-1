@@ -1,49 +1,25 @@
-// CODDING CHALANGE ONE PART 2
+// INTRODUCTION TO ARRAYS
 
-// const calcAverage = (a, b, c) => (a + b + c) / 3;
+const friends = ['Michael', 'Steven', 'Peter', 'Alamin', 'Monir', 'Shariar', 'Ratul'];
+console.log(friends);
+console.log(friends.length);
+console.log(friends[2]);
+console.log(friends[friends.length - 2]);
 
-// let scoreDolphines = calcAverage(44, 23, 71);
-// let scoreKoalas = calcAverage(65, 54, 49);
-// console.log(scoreDolphines, scoreKoalas);
+// ARRAY OBJECT
+const year = new Array(2000, 2010, 2012, 2014, 206, 2018, 2020);
+console.log(year);
+year[1] = 2015; // input another value in array
+console.log(year);
 
-// const checkWinner = function (avgDolhins, avgKoalas) {
-//     if (avgDolhins >= 2 * avgKoalas) {
-//         console.log(`Dolphines win 🏆 ${avgDolhins} vs. ${avgKoalas}`);
-//     } else if (avgDolhins >= 2 * avgKoalas) {
-//         console.log(`Koalas win 🏆 ${avgKoalas} vs. ${avgDolhins}`);
-//     }
-//     else {
-//         console.log('No team wins');
-//     }
-// }
-// checkWinner(scoreDolphines, scoreKoalas);
-// checkWinner(555, 111);
-
-// scoreDolphines = calcAverage(85, 54, 41);
-// scoreKoalas = calcAverage(23, 34, 27);
-// console.log(scoreDolphines, scoreKoalas);
-// checkWinner(scoreDolphines, scoreKoalas);
-
-const calcAverage = (a, b, c) => (a + b + c) / 3;
-console.log(calcAverage(44, 23, 71));
-
-let avgDolhins = calcAverage(44, 23, 71);
-let avgKoalas = calcAverage(65, 54, 49);
-console.log(avgDolhins, avgKoalas);
-
-const checkWinner = function (avgDolhins, avgKoalas) {
-    if (avgDolhins > 2 * avgKoalas) {
-        console.log(`Dolphines win ${avgDolhins} 🏆 vs. Koalas ${avgKoalas}`);
-    } else if (avgDolhins > 2 * avgKoalas) {
-        console.log(`Koalas win ${avgKoalas} 🏆 vs. Dolphines ${avgDolhins}`);
-    } else {
-        console.log('No team winer');
-    }
+function calcAge(birthYear) {
+    return 2022 - birthYear;
 }
-checkWinner(avgDolhins, avgKoalas);
+// const years = new Array(2000, 2010, 2012, 2014, 206, 2018, 2020);
+const age = calcAge(year[0]);
+const age1 = calcAge(year[1]);
+const age2 = calcAge(year[year.length - 1]);
+console.log([age, age1, age2]);
 
-checkWinner(555, 111);
-avgDolhins = calcAverage(85, 54, 41);
-avgKoalas = calcAverage(23, 34, 27);
-console.log(avgDolhins, avgKoalas);
-checkWinner(avgDolhins, avgKoalas);
+const ages = [calcAge(year[0]), calcAge(year[3]), calcAge(year[year.length - 1])];
+console.log(ages);
