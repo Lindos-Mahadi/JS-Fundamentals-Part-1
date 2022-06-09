@@ -1,25 +1,46 @@
-// INTRODUCTION TO ARRAYS
+// BASIC ARRAY OPERATIONS METHOD
 
-const friends = ['Michael', 'Steven', 'Peter', 'Alamin', 'Monir', 'Shariar', 'Ratul'];
+const friends = ['Michael', 'Steven', 'Peter', 'Jonas', 'Scedtmann'];
+
+// Add elements
 console.log(friends);
-console.log(friends.length);
-console.log(friends[2]);
-console.log(friends[friends.length - 2]);
+console.log([friends.length]);
 
-// ARRAY OBJECT
-const year = new Array(2000, 2010, 2012, 2014, 206, 2018, 2020);
-console.log(year);
-year[1] = 2015; // input another value in array
-console.log(year);
 
-function calcAge(birthYear) {
-    return 2022 - birthYear;
+// Input element
+friends.push('Mahadi');
+console.log(friends);
+console.log([friends.length]);
+
+friends.push('lindos');
+console.log(friends);
+console.log([friends.length]);
+
+const newLength = friends.push('Mahadi');
+console.log(friends);
+console.log([friends.length]);
+
+// Remove element
+friends.pop('Mahadi');
+console.log(friends);
+console.log([friends.length]);
+
+// First element
+friends.shift();
+console.log(friends);
+console.log([friends.length]);
+
+// Last element
+friends.unshift('lindos');
+console.log(friends);
+console.log([friends.length]);
+
+console.log(friends.indexOf('lindos'));
+
+friends.push(23);
+console.log(friends.includes('lindos'));
+console.log(friends.includes('23'));
+
+if (friends.includes('lindos')) {
+    console.log(`You have a new friend called lindos`);
 }
-// const years = new Array(2000, 2010, 2012, 2014, 206, 2018, 2020);
-const age = calcAge(year[0]);
-const age1 = calcAge(year[1]);
-const age2 = calcAge(year[year.length - 1]);
-console.log([age, age1, age2]);
-
-const ages = [calcAge(year[0]), calcAge(year[3]), calcAge(year[year.length - 1])];
-console.log(ages);
