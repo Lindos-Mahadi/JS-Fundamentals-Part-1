@@ -1,41 +1,42 @@
-//  DOT vs BRACKET NOTATION
+// OBJECT METHODS
 
 const jonas = {
     firstName: 'Jonas',
     lastName: 'Schmedtmann',
-    age: 2037 - 1991,
+    birthYear: 1991,
     job: 'teacher',
-    friends: ['Michael', 'Peter', 'Steven']
+    friends: ['Michael', 'Peter', 'Steven'],
+    hasDriverLicense: true,
+
+    // calcAge: function (birthYear) {
+    //     return 2022 - birthYear;
+    // }
+
+    // calcAge: function () {
+    //     console.log(this);
+    //     return 2022 - this.birthYear;
+    // }
+
+    calcAge: function () {
+        // console.log(this);
+        this.age = 2022 - this.birthYear;
+        return this.age;
+    },
+
+    getSummary: function () {
+        return `${this.firstName} is a ${this.calcAge()}-years old ${this.job}, and he has ${this.hasDriverLicense ? 'a' : 'no'} driver's license.`;
+
+    }
 };
-console.log(jonas);
+// console.log(jonas.calcAge(1991));
+// console.log(jonas['calcAge'](1991));
 
-// DOT NOTATION
-console.log(jonas.firstName);
+// console.log(jonas.calcAge());
 
-// BRACKET NOTATION
-console.log(jonas['lastName']);
-const nameKey = 'Name';
-console.log(jonas['first' + nameKey]);
-console.log(jonas['last' + nameKey]);
-// console.log(jonas);
-
-
-const interestIn = prompt('What dou you want to know about Jonas? Choose between firstName, lastName, age, job and friends');
-
-if (jonas[interestIn]) {
-    console.log(jonas[interestIn]);
-} else {
-    console.log('Wrong request! Choose between firstName, lastName, age, job and friends');
-}
-
-// input data later
-jonas.location = 'Bangladesh';
-jonas['twitter'] = '@lindos';
-console.log(jonas);
+console.log(jonas.calcAge());
+console.log(jonas.age);
+console.log(jonas.age);
 
 // Challenge
-// "Jonas has 3 friends, and his best friend is called Michael"
-
-console.log(`${jonas.firstName} has ${jonas.friends.length} friends and his best friend is called ${jonas.friends[0]} `);
-
-
+// "Jonas is a 46-year old teacher, and he has a driver's license"
+console.log(jonas.getSummary());
