@@ -1,13 +1,4 @@
-//INTRODUCTION TO OBJECTS
-
-const jonasArray = [
-    'Jonas',
-    'Schmedtmann',
-    2037 - 1991,
-    'teacher',
-    ['Michael', 'Peter', 'Steven']
-];
-console.log(jonasArray);
+//  DOT vs BRACKET NOTATION
 
 const jonas = {
     firstName: 'Jonas',
@@ -17,3 +8,34 @@ const jonas = {
     friends: ['Michael', 'Peter', 'Steven']
 };
 console.log(jonas);
+
+// DOT NOTATION
+console.log(jonas.firstName);
+
+// BRACKET NOTATION
+console.log(jonas['lastName']);
+const nameKey = 'Name';
+console.log(jonas['first' + nameKey]);
+console.log(jonas['last' + nameKey]);
+// console.log(jonas);
+
+
+const interestIn = prompt('What dou you want to know about Jonas? Choose between firstName, lastName, age, job and friends');
+
+if (jonas[interestIn]) {
+    console.log(jonas[interestIn]);
+} else {
+    console.log('Wrong request! Choose between firstName, lastName, age, job and friends');
+}
+
+// input data later
+jonas.location = 'Bangladesh';
+jonas['twitter'] = '@lindos';
+console.log(jonas);
+
+// Challenge
+// "Jonas has 3 friends, and his best friend is called Michael"
+
+console.log(`${jonas.firstName} has ${jonas.friends.length} friends and his best friend is called ${jonas.friends[0]} `);
+
+
