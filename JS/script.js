@@ -1,46 +1,19 @@
-// BASIC ARRAY OPERATIONS METHOD
+//INTRODUCTION TO OBJECTS
 
-const friends = ['Michael', 'Steven', 'Peter', 'Jonas', 'Scedtmann'];
+const jonasArray = [
+    'Jonas',
+    'Schmedtmann',
+    2037 - 1991,
+    'teacher',
+    ['Michael', 'Peter', 'Steven']
+];
+console.log(jonasArray);
 
-// Add elements
-console.log(friends);
-console.log([friends.length]);
-
-
-// Input element
-friends.push('Mahadi');
-console.log(friends);
-console.log([friends.length]);
-
-friends.push('lindos');
-console.log(friends);
-console.log([friends.length]);
-
-const newLength = friends.push('Mahadi');
-console.log(friends);
-console.log([friends.length]);
-
-// Remove element
-friends.pop('Mahadi');
-console.log(friends);
-console.log([friends.length]);
-
-// First element
-friends.shift();
-console.log(friends);
-console.log([friends.length]);
-
-// Last element
-friends.unshift('lindos');
-console.log(friends);
-console.log([friends.length]);
-
-console.log(friends.indexOf('lindos'));
-
-friends.push(23);
-console.log(friends.includes('lindos'));
-console.log(friends.includes('23'));
-
-if (friends.includes('lindos')) {
-    console.log(`You have a new friend called lindos`);
-}
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtmann',
+    age: 2037 - 1991,
+    job: 'teacher',
+    friends: ['Michael', 'Peter', 'Steven']
+};
+console.log(jonas);
