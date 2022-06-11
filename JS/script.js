@@ -1,30 +1,41 @@
-// CODING CHALLENGE Three Part Two
+// LOOPING ARRAYS, BREAKING AND CONTINUING
+const jonasArray = [
+    'Jonas',
+    'Schmedtmann',
+    2037 - 1991,
+    'teacher',
+    ['Michael', 'Peter', 'Steven'],
+    true,
+    false
+];
 
-const Mark = {
-    fullName: 'Mark Killer',
-    mass: 78,
-    height: 1.69,
+const types = [];
 
-    calcBMI: function () {
-        this.bmi = this.mass / this.height ** 2;
-        return this.bmi;
-    }
+for (let index = 0; index < jonasArray.length; index++) {
+    // const element = jonasArray[index];
+    // reading from jonasArray
+    console.log(jonasArray[index], typeof jonasArray[index]);
+    types.push(typeof jonasArray[index]);
 }
-const John = {
-    fullName: 'John Smith',
-    mass: 79,
-    height: 1.69,
+console.log(types);
 
-    calcBMI: function () {
-        this.bmi = this.mass / this.height ** 2;
-        return this.bmi;
-    }
+const ages = [];
+const years = new Array(2000, 2010, 2012, 2014, 206, 2018, 2020);
+for (let i = 0; i < years.length; i++) {
+    ages.push(2037 - years[i]);
 }
-Mark.calcBMI();
-John.calcBMI();
-console.log(Mark.bmi, John.bmi);
-if (Mark.bmi > John.bmi) {
-    console.log(`${Mark.fullName} is ${Mark.bmi} higher then John ${John.bmi}`);
-} else if (John.bmi > Mark.bmi) {
-    console.log(`${John.fullName} is ${John.bmi} higher then John ${Mark.bmi}`);
+console.log(ages);
+
+// continue and break
+console.log("CONTINUE WITH ONLY STRINGS");
+for (let index = 0; index < jonasArray.length; index++) {
+    if (typeof jonasArray[index] !== 'string') continue;
+    console.log(jonasArray[index], typeof jonasArray[index]);
+}
+
+// continue and break
+console.log("BREAK WITH ONLY NUMBERS");
+for (let index = 0; index < jonasArray.length; index++) {
+    if (typeof jonasArray[index] == 'number') break;
+    console.log(jonasArray[index], typeof jonasArray[index]);
 }
