@@ -1,29 +1,38 @@
-// CODDING CHALLANGE FOUR PART TWO
+// Developer Skills & Editor Setup
 
-const calcTip = function (bill) {
-  return bill >= 50 && bill <= 300 ? bill * 0.15 : 0.2;
-  // console.log(`“The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`);
-};
+// Coding Challenge #1
 
-const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
-const tips = [];
-const totals = [];
+// Given an array of forecasted maximum temperatures, the thermometer displays a  string with the given temperatures. Example: [17, 21, 23] will print "... 17ºC in 1  days ... 21ºC in 2 days ... 23ºC in 3 days ..."
 
-for (let i = 0; i < bills.length; i++) {
-  const tip = calcTip(bills[i]);
-  tips.push(tip);
-  totals.push(tip + bills[i]);
-}
-console.log(bills, tips, totals);
+// Your tasks:
+// 1. Create a function 'printForecast' which takes in an array 'arr' and logs a string like  the above to the console. Try it with both test datasets.
+// 2. Use the problem-solving framework: Understand the problem and break it up into sub-problems!
 
-const calcAvarage = function (arr) {
-  let sum = 0;
+// Test data:
+// § Data 1: [17, 21, 23]
+// § Data 2: [12, 5, -5, 0, 4]
+
+// 1) Understanding the problem
+//---Array transform to string seperted by ...
+//---What is the X days? answer: index + 1
+//---
+// 2) Breaking Up into sub-problem
+//---Transform array into string
+//---Transform each element to string with ºC
+//---String needs to contain day (index+1)
+//---Add...between elements and start and end of string
+//--- log string to console
+
+const dataOne = [17, 21, 23];
+const dataTwo = [12, 5, -5, 0, 4];
+
+console.log(`...${dataOne[0]}ºC ...${dataOne[1]}ºC...${dataOne[2]}ºC...`);
+
+const printForecast = function (arr) {
+  let str = '';
   for (let i = 0; i < arr.length; i++) {
-    sum += arr[i];
+    str += `...${arr[i]}ºC in ${i + 1} days`;
   }
-  return sum / arr.length;
+  console.log(str);
 };
-
-console.log(calcAvarage([2, 3, 7]));
-console.log(calcAvarage(totals));
-console.log(calcAvarage(tips));
+printForecast(dataOne);
