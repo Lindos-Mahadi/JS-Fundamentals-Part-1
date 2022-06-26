@@ -47,3 +47,13 @@ const closeModal = function () {
 
 btnCloseModal.addEventListener('click', closeModal);
 overlay.addEventListener('click', closeModal);
+
+// HANDLING AN Esc_keypress Event
+
+document.addEventListener('keydown', function (e) {
+  // console.log(e);
+
+  if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+    closeModal();
+  }
+});
