@@ -1,106 +1,52 @@
 'use strict';
 
-// PROJECT #3
-// SELECTING ELEMENTS
+const restaurant = {
+  name: 'Classico Italiano',
+  location: 'Via Angelo Tavanti 23, Firenze, Italy',
+  categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+  starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
+  mainMenu: ['Pizza', 'Pasta', 'Risotto'],
 
-const player0El = document.querySelector('.player--0');
-const player1El = document.querySelector('.player--1');
-
-const score0El = document.querySelector('#score--0');
-const score1El = document.getElementById('score--1');
-const current0El = document.getElementById('current--0');
-const current1El = document.getElementById('current--1');
-
-const diceEl = document.querySelector('.dice');
-const btnHNew = document.querySelector('.btn--new');
-const btnRoll = document.querySelector('.btn--roll');
-const btnHold = document.querySelector('.btn--hold');
-
-let scores, currentScore, activePlayer, playing;
-
-// Starting condition
-const init = function () {
-  scores = [0, 0];
-  currentScore = 0;
-  activePlayer = 0;
-  playing = true;
-
-  score0El.textContent = 0;
-  score1El.textContent = 0;
-  current0El.textContent = 0;
-  current1El.textContent = 0;
-
-  diceEl.classList.add('hidden');
-  player0El.classList.remove('player--winner');
-  player1El.classList.remove('player--winner');
-  player0El.classList.add('player--active');
-  player1El.classList.remove('player--active');
+  // ES6 enhanced object literals openingHours,
+  order(starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
 };
 
-init();
+const arr = [2, 3, 4, 5];
+const a = arr[0];
+const b = arr[1];
+const c = arr[2];
 
-// ROLLING DICE FUNCTIONALITY
+const [x, y, z] = arr;
+console.log(x, y, z);
+console.log(arr);
 
-// CREATE FUNCTION FOR CLEAN CODE
-const switchPlayer = function () {
-  document.getElementById(`current--${activePlayer}`).textContent = 0;
-  currentScore = 0;
-  activePlayer = activePlayer === 0 ? 1 : 0;
+let [main, , secondary] = restaurant.categories;
+console.log(main, secondary);
 
-  // CSS STYLE
-  player0El.classList.toggle('player--active');
-  player1El.classList.toggle('player--active');
-};
+// switching variables
+// const temp = main;
+// main = secondary;
+// secondary = temp;
 
-btnRoll.addEventListener('click', function () {
-  if (playing) {
-    // 1. Generating a random dice roll
-    const dice = Math.trunc(Math.random() * 6) + 1;
-    console.log(dice);
+[main, secondary] = [secondary, main];
+console.log(main, secondary);
 
-    // 2. Display dice
-    diceEl.classList.remove('hidden');
-    diceEl.src = `dice-${dice}.png`;
+// Receive 2 return values from a function
+console.log(restaurant.order(2, 0));
+const [starter, mainCourse] = restaurant.order(2, 0);
+console.log(starter, mainCourse);
 
-    // 3. Check for rolled 1: if true, switch to next player
-    if (dice !== 1) {
-      // Add dice to current score
-      currentScore += dice;
-      // CHANGE int dynamic
-      document.getElementById(`current--${activePlayer}`).textContent =
-        currentScore;
-    } else {
-      // Switch to next player
-      switchPlayer();
-    }
-  }
-});
+// Nested destructuring
+const nested = [2, 4, [5, 6]];
+// const [i, j] = nested;
+const [i, j, [k, l]] = nested;
+console.log(i, j, l);
 
-btnHold.addEventListener('click', function () {
-  if (playing) {
-    // 1. Add currento score to active players score
-    scores[activePlayer] += currentScore;
-    // scores[1] = scores[1] + currentScore;
-    document.getElementById(`score--${activePlayer}`).textContent =
-      scores[activePlayer];
+// Default values
+// const [p, q, r] = [8, 9];
+// console.log(p, q, r);
 
-    // 2. Check if players score is >=100
-    // Finish the game
-    if (scores[activePlayer] >= 20) {
-      playing = false;
-      diceEl.classList.add('hidden');
-      document
-        .querySelector(`.player--${activePlayer}`)
-        .classList.add('player--winner');
-      document
-        .querySelector(`.player--${activePlayer}`)
-        .classList.remove('player--active');
-    } else {
-      // 3. Switch the next player
-      switchPlayer();
-    }
-  }
-});
-
-// RESSTING THE GAME
-btnHNew.addEventListener('click', init);
+const [p = 1, q = 1, r = 1] = [8, 9];
+console.log(p, q, r);
